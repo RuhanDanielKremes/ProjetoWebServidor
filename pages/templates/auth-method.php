@@ -4,19 +4,18 @@
 
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
+    $iterator = 0;
 
-    if (in_array($nome, $DB['name']) && in_array($senha, $DB['password'])) {
-        echo 'Bem vindo, ' . $nome . '!';
-    } else {
-        echo 'Usuário ou senha inválidos!';
+    foreach ($DB['name'] as $name){
+        if ($nome == $name){
+            if ($senha == $DB['password'][$iterator]){
+                echo 'Bem vindo, ' . $nome . '!';
+                break;
+            } else {
+                echo 'Usuário ou senha inválidos!';
+                break;
+            }
+        }
+        $iterator++;
     }
-
-/*    
-    if ($nome == 'admin' && $senha == 'AdminPassword') {
-        echo 'Bem vindo, admin!';
-    } else {
-        echo 'Usuário ou senha inválidos!';
-    }
-*/
-
 ?>
