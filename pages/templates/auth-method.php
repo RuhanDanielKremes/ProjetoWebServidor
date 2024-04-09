@@ -8,11 +8,14 @@
 
     foreach ($DB['name'] as $name){
         if ($nome == $name){
-            if ($senha == $DB['password'][$iterator]){
+            if ($senha == $DB['password']["$iterator"]){
                 echo 'Bem vindo, ' . $nome . '!';
-                break;
+                session_start();
+                $_SESSION['LogginTime'] = time()+3600;
+                header("Location: ../index.php");
+                break;                
             } else {
-                echo 'Usuário ou senha inválidos!';
+                echo '<h1>Usuário ou senha inválidos!</h1>';
                 break;
             }
         }

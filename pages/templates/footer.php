@@ -14,6 +14,7 @@
 
 
    <footer class="section">
+        <div class="center grey-text">Lojinha do james</div>
         <div class="center grey-text">© 2020 UwU</div>
     </footer>
 </body>

@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<?php include 'templates/header.php'?>
-<?php include 'templates/modificar.php'?>
-<?php include 'templates/footer.php'?>
-
-</div>
+    <?php include 'templates/header.php'?>
+    <h1>HI</h1>
+    <?php include 'templates/footer.php'?>
 
 </html>
