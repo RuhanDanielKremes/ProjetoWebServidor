@@ -19,8 +19,8 @@
             <div class="card-product">
             <img src="<?php echo $image; ?>" alt="<?php echo $name; ?>">
                 <h2><?php echo $name; ?></h2>
-                <p>Preço: R$ <?php echo number_format($price, 2, ',', '.'); ?></p>
-                <p>Quantidade disponível: <?php echo $quantity; ?></p>
+                <p>R$ <?php echo number_format($price, 2, ',', '.'); ?></p>
+                <p>Quantidade: <?php echo $quantity; ?></p>
                 <button class="btn-buy">Comprar</button>
             </div>
             <?php } ?>
