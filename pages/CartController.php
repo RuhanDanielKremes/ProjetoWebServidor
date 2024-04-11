@@ -7,32 +7,40 @@ class CartController {
     private $cartModel;
     
 
-    public function __construct() {
+    function __construct() {
         $this->cartModel = new CartModel(); // Inicializa o modelo do carrinho de compras
     }
 
-    public function addCart($produto_id, $produto_nome, $quantidade, $preco) {
+    function addCart($code, $name_product, $quantity_product, $price_quantity) {
         // Adiciona um item ao carrinho
-        $this->cartModel->addItem($produto_id, $produto_nome, $quantidade, $preco);
+        $this->cartModel->addItem($code, $name_product, $quantity_product, $price_quantity);
     }
 
-    public function removerCart($produto_id) {
+    function removerCart($code) {
         // Remove um item do carrinho
-        $this->cartModel->removerItem($produto_id);
+        $this->cartModel->removerItem($code);
     }
 
-    public function mostrarCart() {
+    function mostrarCart() {
         // Exibe o carrinho de compras
         $cartItems = $this->cartModel->getCartItems();
         $total = $this->cartModel->calculaTotal();
         include 'cart_view.php'; // visualização do carrinho de compras
     }
 
-    public function limparCart() {
+    function limparCart() {
         // Limpa o carrinho de compras
         $this->cartModel->limparCart();
     }
 
-    
+    function getCartItems() {
+        // Retorna os itens do carrinho usando o método correspondente do modelo
+        return $this->cartModel->getCartItems();
+    }
+
+    function getTotal() {
+        // Retorna o total do carrinho usando o método correspondente do modelo
+        return $this->cartModel->calculaTotal();
+    }
 }
 ?>
