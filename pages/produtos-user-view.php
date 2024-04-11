@@ -9,7 +9,7 @@
     <!--GRID DE PRODUTOS-->
     <div class="grid-product">
         <?php 
-            require 'DB.php';
+            require '/templates/DB.php';
             //A cada iteração vai renderizar um card de produtos vindo do banco de dados
             foreach($DB_PRODUTOS['image_product'] as $index => $image){
                 $name = $DB_PRODUTOS['name_product'][$index];
