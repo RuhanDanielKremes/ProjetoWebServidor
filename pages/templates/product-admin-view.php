@@ -10,7 +10,7 @@
         <div class="admin-product">
             <div class="add-product">
                 <h1>Adicionar Produto</h1>
-                <form action="FAZER FUNÇÃO" method="post"> <!--Fazer funçao de adicionar-->
+                <form action="product-admin-controller" method="post"> 
 
                     <label for="img-product">Insira a imagem</label>
                     <input type="file" name="img-product" id="img-product" required> 
@@ -28,12 +28,12 @@
                     <input type="text" name="code" id="code" required><br>
 
                     <input type="submit" value="Adicionar Produto">
-                    
+
                 </form>    
             </div>
             <div class="edit-product">
                 <h1>Editar produto</h1>
-                <table border="1">
+                <table>
                     <thead>
                         <tr>
                             <th>Imagem</th>

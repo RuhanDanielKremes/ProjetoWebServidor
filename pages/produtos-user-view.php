@@ -21,7 +21,7 @@
                 <h2><?php echo $name; ?></h2>
                 <p>R$ <?php echo number_format($price, 2, ',', '.'); ?></p>
                 <p>Quantidade: <?php echo $quantity; ?></p>
-                <button class="btn-buy">Comprar</button>
+                <button class="btn-buy">Comprar</button> <!--ADICIONAR FUNÇÃO PARA PUXAR POR CARRINHO KAUE-->
             </div>
             <?php } ?>
     </div>
