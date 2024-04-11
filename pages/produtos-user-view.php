@@ -16,12 +16,13 @@
                 $price = $DB_PRODUTOS['price_product'][$index];
                 $quantity = $DB_PRODUTOS['quantity_product'][$index];
         ?>
-            <form method="POST" action="shopcart.php">
-                    <input type="hidden" name="produto_id" value="<?php echo $productId; ?>">
-                    <label for="quantity_<?php echo $productId; ?>">Quantidade:</label>
-                    <input type="number" id="quantity_<?php echo $productId; ?>" name="quantidade" value="1" min="1" max="<?php echo $quantity; ?>">
-                    <button type="submit" class="btn-buy" name="add_to_cart">Adicionar ao Carrinho</button>
-                </form>
+            <div class="card-product">
+            <img src="<?php echo $image; ?>" alt="<?php echo $name; ?>">
+                <h2><?php echo $name; ?></h2>
+                <p>R$ <?php echo number_format($price, 2, ',', '.'); ?></p>
+                <p>Quantidade: <?php echo $quantity; ?></p>
+                <button class="btn-buy">Comprar</button> <!--ADICIONAR FUNÇÃO PARA PUXAR POR CARRINHO KAUE-->
+            </div>
             <?php } ?>
     </div>
 </div>
