@@ -20,7 +20,9 @@
                 <h2><?php echo $name; ?></h2>
                 <p>R$ <?php echo number_format($price, 2, ',', '.'); ?></p>
                 <p>Quantidade: <?php echo $quantity; ?></p>
-                <button class="btn-buy">Comprar</button> <!--ADICIONAR FUNÇÃO PARA PUXAR POR CARRINHO KAUE-->
+                <form method="POST" action="shopcart.php">
+                    <button type="submit" class="btn-buy" name="add_to_cart">Adicionar ao Carrinho</button>
+                </form>
             </div>
             <?php } ?>
     </div>
