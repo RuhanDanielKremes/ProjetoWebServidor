@@ -23,5 +23,8 @@
         'quantity_product' => [5, 3, 3, 10, 5, 6, 3, 5, 7],
         'code' => ['0001','0002','0003','0004','0005','0006','0007','0008','0009',]
     ];
+
+    /*Minha ideia é armazenar todos registros de produtos excluidos e além disso armazenar o user que excluiu pra fazer sistema mais seguro*/
+    $DB_PRODUTOS_EXCLUIDOS = [];
     
 ?>

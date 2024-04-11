@@ -41,7 +41,7 @@
                             <th>Quantidade</th>
                             <th>Preço</th>
                             <th>Código</th>
-                            <th>Ações</th>
+                            <th>Excluir</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -59,11 +59,8 @@
                                 <td><?php echo $quantity; ?></td>
                                 <td>R$ <?php echo number_format($price, 2, ',', '.'); ?></td>
                                 <td><?php echo $code; ?></td>
-                                <td>
-                                    <form action="delete-product.php" method="POST"> <!--Fazer funçao de deletar-->
-                                        <input type="hidden" name="codigo" value="<?php echo $produto['codigo']; ?>">
-                                        <input type="submit" value="Excluir">
-                                    </form>
+                                <td> 
+                                    <img src="../images/remove.png" alt="" onclick="deletar()">  <!-- Desenvolver funçao de deletar puxando pelo código"-->
                                 </td>
                             </tr>
                             <?php
