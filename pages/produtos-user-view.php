@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 <?php include 'templates/header.php'?>
 
@@ -9,7 +8,7 @@
     <!--GRID DE PRODUTOS-->
     <div class="grid-product">
         <?php 
-            require 'DB.php';
+            require 'templates/DB.php';
             //A cada iteração vai renderizar um card de produtos vindo do banco de dados
             foreach($DB_PRODUTOS['image_product'] as $index => $image){
                 $name = $DB_PRODUTOS['name_product'][$index];
@@ -26,5 +25,4 @@
     </div>
 </div>
 <?php include 'templates/footer.php'?>
-</body>
 </html>

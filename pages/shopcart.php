@@ -25,6 +25,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Incluir o cart_view.php para exibir o carrinho de compras
 include 'cart_view.php';
+
 ?>
-
-
