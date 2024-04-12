@@ -9,3 +9,20 @@ Caminho para chamar o banco na pasta view, model, controller
 Model -> Comunicação entre o controller e o bd
 Controller -> Controle de entradas saídas e lógica da página
 View -> Visualização da página
+
+meu_projeto/
+│
+├── src/
+│   ├── controllers/
+│   ├── models/
+│   ├── views/
+│   └── ...
+│
+├── public/
+│   ├── css/
+│   ├── js/
+│   ├── img/
+│   └── ...
+│
+└── config/
+    └── db.php
