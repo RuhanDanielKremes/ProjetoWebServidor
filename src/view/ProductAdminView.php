@@ -13,7 +13,7 @@
             <label for="quantity-product">Quantidade:</label>
             <input type="number" name="quantity-product" id="quantity-product" required><br>
             
-            <label for="price-product">Preço:</label>
+            <label for="price-product">Preço Unitário:</label>
             <input type="number" name="price-product" id="price-product" step="0.01" required><br>
             
             <label for="code">Código:</label>
@@ -33,7 +33,7 @@
                     <th>Imagem</th>
                     <th>Nome</th>
                     <th>Quantidade</th>
-                    <th>Preço</th>
+                    <th>Preço Unitário</th>
                     <th>Código</th>
                     <th>Excluir</th>
                 </tr>

@@ -1,5 +1,5 @@
 <?php 
-    class AddToCartModel{    
+    class BTNAddToCartController{    
         public function adicionarNoCarrinho($code){  
             include("CartController.php");
             require "../../config/DB.php";
