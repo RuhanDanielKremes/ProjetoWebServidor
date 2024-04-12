@@ -42,7 +42,7 @@
             <tbody>
                 <?php
                 require 'DB.php';
-                foreach ($DB_PRODUTOS['image-product'] as $index => $image) {
+                foreach ($DB_PRODUTOS['image_product'] as $index => $image) {
                     $name = $DB_PRODUTOS['name_product'][$index];
                     $price = $DB_PRODUTOS['price_product'][$index];
                     $quantity = $DB_PRODUTOS['quantity_product'][$index];

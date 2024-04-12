@@ -10,7 +10,7 @@
     ];
 
     /* Adicionei um banco de dados para os produtos para poder 
-        manipular no carrinho facilmente, visto quese fizer estático com html e css a manipulação ficaria complexa
+        manipular no carrinho facilmente, visto que se fizer estático com html e css a manipulação ficaria complexa
         e poderiamos nos deparar com um problema de lógica lá na frente 
         Optei apenas por fazer a descrição estática -JC
         */
