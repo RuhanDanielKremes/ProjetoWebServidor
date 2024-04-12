@@ -1,5 +1,5 @@
 <?php
-require 'product-admin-model.php';
+require '../model/ProductAdminModel.php';
 
 // Verificar se o formulário de adição de produto foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include "header.php"; ?>
+<?php include "../public/header.php"; ?>
 <div class="admin-product">
     <div class="add-product">
         <h1>Adicionar Produto</h1>
@@ -41,7 +41,7 @@
             </thead>
             <tbody>
                 <?php
-                require 'DB.php';
+                require '../DB.php';
                 foreach ($DB_PRODUTOS['image_product'] as $index => $image) {
                     $name = $DB_PRODUTOS['name_product'][$index];
                     $price = $DB_PRODUTOS['price_product'][$index];
@@ -66,6 +66,6 @@
     </div>
 </div>
 
-<?php include "footer.php"; ?>
+<?php include "../public/footer.php"; ?>
 
 </html>
