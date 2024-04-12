@@ -1,6 +1,6 @@
 <?php
 
-include 'CartModel.php';
+include '../model/CartModel.php';
 
 class CartController {
 
@@ -25,7 +25,7 @@ class CartController {
         // Exibe o carrinho de compras
         $cartItems = $this->cartModel->getCartItems();
         $total = $this->cartModel->calculaTotal();
-        include 'cart_view.php'; // visualização do carrinho de compras
+        include 'view/cart_view.php'; // visualização do carrinho de compras
     }
 
     function limparCart() {

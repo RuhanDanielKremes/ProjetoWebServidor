@@ -3,8 +3,8 @@
 
 
 <?php 
-    include 'templates/header.php';
-    include 'CartController.php';
+    include '../public/header.php';
+    include '../controller/CartController.php';
     $cartController = new CartController();
 ?>
 
@@ -59,7 +59,7 @@
     ?>
 </div>
 
-<?php include 'templates/footer.php' ?>
+<?php include '../public/footer.php' ?>
 
 
 </html>
