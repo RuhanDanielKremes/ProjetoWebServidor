@@ -1,9 +1,11 @@
 <?php 
-    class AddToCartModel{
+    class AddToCartModel{    
         public function adicionarNoCarrinho($code){  
+            include("CartController.php");
             require "../../config/DB.php";
             //Função array search retorna o index do produto
             $index = array_search($code, $DB_PRODUTOS['$code']);
+
             if ($index == true) {
                 //O codigo só puxei por controle msm, talvez nem seja necessário
                 $code = $DB_PRODUTOS['code'][$index];
@@ -24,13 +26,10 @@
                  essa matriz vai ser os produtos que o user ta comprando que da pra você exibir pra ele em forma de tabela.
                  depois é só fazer a associação do carrinho dele com os dados do user (você e ruhan)
                  E por fim, depois que ele realizar a compra fazer a subtração da quantidade do BD
-                 
+                 FEITO
                 */
-                
-
-
-            }  
+                addLineInMatrix($image, $name, $price, $quantity, $code);
+            }
         }               
-
     } 
 ?>

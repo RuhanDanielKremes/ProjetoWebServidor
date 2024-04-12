@@ -1,12 +1,28 @@
 <?php
 
 include '../model/CartModel.php';
+//função que cria a matriz do carrinho ao cliclar no botão
+ function addLineInMatrix($image, $name, $price, $quantity, $code){
+    if(!isset($GLOBALS['matrix'])){
+        //inicializando a matriz caso não exista
+        $GLOBALS['matrix'] = array();
+    }
 
+    //criando uma linha com os valores recebidos através do botão adicionar ao carrinho
+    $newLine = array(
+        'image_product_cart' => $image,
+        'name_product_cart' => $name,
+        'price_product_cart' => $price,
+        'quantity_product_cart' => $quantity,
+        'code_product_cart' => $code
+    );
+
+    $GLOBALS['matrix'][] = $newLine;
+
+}
 class CartController {
-
     private $cartModel;
     
-
     function __construct() {
         $this->cartModel = new CartModel(); // Inicializa o modelo do carrinho de compras
     }
