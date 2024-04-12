@@ -1,0 +1,1 @@
+Julia: O projeto só vai abrir depois que o Ru ajeitar os caminhos do login
