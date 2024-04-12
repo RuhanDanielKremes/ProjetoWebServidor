@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include '../public/header.php'?>
+<?php include 'templates/header.php'?>
 
 <div class='container mediun'>
-    <h3>PÁGINA DE PRODUTOS</h3>
+    <h1>PÁGINA DE PRODUTOS</h1>
     <!--GRID DE PRODUTOS-->
     <div class="grid-product">
         <?php 

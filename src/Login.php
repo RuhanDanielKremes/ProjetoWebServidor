@@ -38,7 +38,7 @@
         <button class="btn form-send" id="SendLoginInfoBtn">Enviar</button>
     </form>  
     
-   <?php include "/public/footer.php"; ?>
+   <?php include "footer.php"; ?>
    
    <script src="ButtonAction.js"></script>
         
