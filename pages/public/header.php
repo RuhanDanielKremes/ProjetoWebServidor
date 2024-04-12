@@ -1,14 +1,14 @@
     <?php
     session_start();
     if(empty($_SESSION['LogginTime']) || $_SESSION['LogginTime'] < time()){
-        header("Location: templates/Login.php");
+        header("Location: public/Login.php");
     }
 ?>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>UwU</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <style>
@@ -27,24 +27,24 @@
                     $atualpage = $_SERVER['REQUEST_URI'];
                     switch($atualpage){
                     case '/PWS/ProjetoWebServidor/pages/index.php':
-                        echo '<li class="active"><a href="../pages/index.php">Home</a></li>
-                            <li><a href="../pages/produtos-user-view.php">Produtos</a></li>
-                            <li><a href="../pages/cart_view.php">Carrinho</a></li>';
+                        echo '<li class="active"><a href=#>Home</a></li>
+                            <li><a href="view/ProductUserView.php">Produtos</a></li>
+                            <li><a href="view/CartView.php">Carrinho</a></li>';
                         break;
-                    case '/PWS/ProjetoWebServidor/pages/produtos-user-view.php':
-                        echo '<li><a href="../pages/index.php">Home</a></li>
-                        <li class="active"><a href="../pages/produtos-user-view.php">Produtos</a></li>
-                        <li><a href="../pages/cart_view.php">Carrinho</a></li>';
+                    case '/PWS/ProjetoWebServidor/pages/view/ProductUserView.php':
+                        echo '<li><a href="../index.php">Home</a></li>
+                            <li class="active"><a href=#>Produtos</a></li>
+                            <li><a href="CartView.php">Carrinho</a></li>';
                         break;
-                    case 'PWS/ProjetoWebServidor/pages/cart_view.php':
-                        echo '<li><a href="../pages/index.php">Home</a></li>
-                            <li class="active"><a href="../pages/produtos-user-view.php">Produtos</a></li>
-                            <li><a href="../pages/produtos-user-view.php">Produtos</a></li>';
+                    case '/PWS/ProjetoWebServidor/pages/view/CartView.php':
+                        echo '<li><a href="../index.php">Home</a></li>
+                            <li><a href="ProductUserView.php">Produtos</a></li>
+                            <li class="active"><a href="#">Carrinho</a></li>';
                         break;
                     default :
-                        echo '<li><a href="../pages/index.php">Home</a></li>
-                            <li><a href="../pages/produtos-user-view.php">Produtos</a></li>
-                            <li class="active"><a href="../pages/cart_view.php">Carrinho</a></li>';
+                        echo '<li><a href="../index.php">Home</a></li>
+                            <li><a href="../view/ProductUserView.php">Produtos</a></li>
+                            <li><a href="../view/CartView.php">Carrinho</a></li>';
                     }
                 ?>
             </ul>
