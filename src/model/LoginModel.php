@@ -1,6 +1,6 @@
 <?php 
 
-    require 'DB.php';
+    require '../../config/DB.php';
 
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
@@ -12,6 +12,8 @@
                 echo 'Bem vindo, ' . $nome . '!';
                 session_start();
                 $_SESSION['LogginTime'] = time()+3600;
+                $_SESSION['name'] = $nome;
+                $_SESSION['role'] = $DB['role']["$iterator"];
                 header("Location: ../index.php");
                 break;                
             } else {

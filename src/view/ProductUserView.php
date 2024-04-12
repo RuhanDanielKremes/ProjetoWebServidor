@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include 'templates/header.php'?>
+<?php include '../../public/header.php'?>
 
 <div class='container mediun'>
     <h1>PÁGINA DE PRODUTOS</h1>

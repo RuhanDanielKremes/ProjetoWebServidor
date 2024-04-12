@@ -32,15 +32,15 @@
             </ul>
         </div>
     </nav>
-   <form method="POST" action="auth-method.php">
+   <form method="POST" action="../model/LoginModel.php">
         <label>Nome: </label><input type="text" name="nome" id="loginUsername" placeholder="Name"><br>
         <label>Senha: </label><input type="password" name="senha" id="loginPassword" placeholder="Password"><br>
         <button class="btn form-send" id="SendLoginInfoBtn">Enviar</button>
     </form>  
     
-   <?php include "footer.php"; ?>
+   <?php include "../../public/footer.php"?>
    
-   <script src="ButtonAction.js"></script>
+   <script src="../ButtonAction.js"></script>
         
 </body>
 </html>
