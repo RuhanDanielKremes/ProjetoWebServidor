@@ -5,3 +5,7 @@ Observação:
 Caminho para chamar o banco na pasta view, model, controller
     ../../config/DB.php
 
+
+Model -> Comunicação entre o controller e o bd
+Controller -> Controle de entradas saídas e lógica da página
+View -> Visualização da página
