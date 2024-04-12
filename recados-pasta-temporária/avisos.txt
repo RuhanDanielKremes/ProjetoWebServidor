@@ -1,1 +1,7 @@
 Julia: O projeto só vai abrir depois que o Ru ajeitar os caminhos do login
+
+Observação:
+
+Caminho para chamar o banco na pasta view, model, controller
+    ../../config/DB.php
+

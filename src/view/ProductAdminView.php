@@ -41,7 +41,7 @@
             </thead>
             <tbody>
                 <?php
-                require '../DB.php';
+                require '../../config/DB.php';
                 foreach ($DB_PRODUTOS['image_product'] as $index => $image) {
                     $name = $DB_PRODUTOS['name_product'][$index];
                     $price = $DB_PRODUTOS['price_product'][$index];
