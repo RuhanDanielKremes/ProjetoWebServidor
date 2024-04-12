@@ -1,5 +1,5 @@
 
-## Controle de tarefas
+# Controle de tarefas
 
 Julia, Kaue, Ruhan 11/04
 
@@ -7,11 +7,10 @@ Julia, Kaue, Ruhan 11/04
 
 - Ajustar caminhos
 
-    - [x] Julia
-    - [x] Kaue
-    - [ ] Ruhan
-
-
+  - [x] Julia
+  - [x] Kaue
+  - [ ] Ruhan
+  
 Julia 12/04
 
 - [ ] Fazer integração com banco de dados na página admin
