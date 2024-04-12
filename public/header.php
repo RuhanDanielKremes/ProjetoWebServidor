@@ -70,14 +70,13 @@
                                     echo '<li><a href="../index.php">Home</a></li>
                                     <li><a href="ProductUserView.php">Produtos</a></li>
                                     <li class="active"><a href="#">Carrinho</a></li>';
-                                    break;/*
-                                default :   DEFAULT QUEBROU COM A ESTRUTURAÇÃO DE PASTAS
-                                echo '<li><a href="../index.php">Home</a></li>
-                                <li><a href="../src/view/ProductUserView.php">Produtos</a></li>
-                                <li><a href="../src/view/CartView.php">Carrinho</a></li>';*/
+                                    break;
+                                default :
+                                    include "breadcrumbs.php";
+                                    echo "<li><a href=\"$breadcrumbs"."src/index.php\">Home</a></li>
+                                    <li><a href=\"$breadcrumbs"."src/view/ProductUserView.php\">Produtos</a></li>
+                                    <li><a href=\"$breadcrumbs"."src/view/CartView.php\">Carrinho</a></li>";
                             }
-                        //    }else{echo 'Erro de permissão';}    //Erro de permissão
-                       // }
                         ?>
             </ul>
             <ul id="nav-mobile" class="right hide-on-small-and-down ">
