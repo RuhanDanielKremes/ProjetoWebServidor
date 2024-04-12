@@ -17,7 +17,7 @@
 
     /*BANCO DE DADOS DOS PRODUTOS*/
     $DB_PRODUTOS= [
-        'image_product' => ['../images/product-1.png','../images/product-2.png','../images/product-3.png','../images/product-4.png', '../images/product-5.png', '../images/product-6.png','../images/product-7.png', '../images/product-8.png', '../images/product-9.png'],
+        'image_product' => ['images/product-1.png','images/product-2.png','images/product-3.png','images/product-4.png', 'images/product-5.png', 'images/product-6.png','images/product-7.png', 'images/product-8.png', 'images/product-9.png'],
         'name_product' => ['Notebook Dell Aspire', 'Notebook Dell Inspiron 15', 'Notebook Dell G15', 'Kit Gamer', 'Placa de video GTX 1650', 'Controle PS5', 'Cadeira Gamer', 'Iphone 13', 'Galaxy S23 Ultra'],
         'price_product' => [3950.00, 2500, 5000, 250, 1200, 500, 650, 3900, 3800],
         'quantity_product' => [5, 3, 3, 10, 5, 6, 3, 5, 7],
