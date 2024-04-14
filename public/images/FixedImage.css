@@ -1,0 +1,15 @@
+.fixedImage{
+    position: fixed;
+    transform: rotate(56deg);
+    opacity: 0.5;
+}
+
+.Position1{
+    top: 15%;
+    left: 92%;
+}
+
+.Position2{
+    top: 15%;
+    left: 5%;
+}
