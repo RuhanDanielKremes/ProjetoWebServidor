@@ -54,9 +54,14 @@
                         <td><?php echo $quantity; ?></td>
                         <td>R$ <?php echo number_format($price, 2, ',', '.'); ?></td>
                         <td><?php echo $code; ?></td>
-                        <td> 
-                            <img src="../../public/images/remove.png" alt="" onclick="deletar()">  <!-- Desenvolver funçao de deletar puxando pelo código"-->
-                        </td>
+                        <form action="../controller/ProductAdminController.php" method="post">
+                            <td> 
+                                <button type="submit" name="delete-product">
+                                    <input type="hidden" name="code-input" value="<?php echo $code; ?>">
+                                    <img src="../../public/images/remove.png" name='delete-product'>  <!-- Desenvolver funçao de deletar puxando pelo código"-->
+                                </button>
+                            </td>
+                        </form>
                     </tr>
                     <?php
                 }

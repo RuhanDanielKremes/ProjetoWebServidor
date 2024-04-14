@@ -8,9 +8,7 @@
     4 => '../../public/images/product-5.png',
     5 => '../../public/images/product-6.png',
     6 => '../../public/images/product-7.png',
-    7 => '../../public/images/product-8.png',
-    8 => '../../public/images/product-9.png',
-
+    7 => '../../public/images/product-9.png',
   ),
   'name_product' => 
   array (
@@ -21,18 +19,7 @@
     4 => 'Placa de video GTX 1650',
     5 => 'Controle PS5',
     6 => 'Cadeira Gamer',
-    7 => 'Iphone 13',
-    8 => 'Galaxy S23 Ultra',
-    9 => 'Celular Xiami',
-    10 => 'Celular Xiaomi 8',
-    11 => 'XBOX',
-    12 => 'XBOX',
-    13 => 'XBOX',
-    14 => 'Simulador de carro',
-    15 => 'test',
-    16 => 'test',
-    17 => 'test',
-    18 => 'test 2',
+    7 => 'Samsung s23 ULTRA',
   ),
   'price_product' => 
   array (
@@ -43,9 +30,7 @@
     4 => 1200,
     5 => 500,
     6 => 650,
-    7 => 3900,
-    8 => 3800,
-
+    7 => 3500.0,
   ),
   'quantity_product' => 
   array (
@@ -56,9 +41,7 @@
     4 => 5,
     5 => 6,
     6 => 3,
-    7 => 5,
-    8 => 7,
-
+    7 => 8,
   ),
   'code' => 
   array (
@@ -70,7 +53,5 @@
     5 => '0006',
     6 => '0007',
     7 => '0008',
-    8 => '0009',
-
   ),
 );

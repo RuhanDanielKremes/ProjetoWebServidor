@@ -2,6 +2,7 @@
 session_start();
 
 require '../model/ProductAdminModel.php';
+require '../../config/DB_PRODUTOS.php';
 
 // Verificar se o formulário de adição de produto foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_product"])) {
@@ -40,6 +41,20 @@ if(isset($_SESSION["sucess"]) && $_SESSION['sucess'] === true) {
 
     unset($_SESSION['sucess']);
 }
+
+    if(isset($_POST['delete-product'])){
+        $code = $_POST['code-input'];
+        $index = array_search($code, $DB_PRODUTOS['code']);
+        unset($DB_PRODUTOS['image_product'][$index]);
+        unset($DB_PRODUTOS['name_product'][$index]);
+        unset($DB_PRODUTOS['price_product'][$index]);
+        unset( $DB_PRODUTOS['quantity_product'][$index]);
+        unset($DB_PRODUTOS['code'][$index]);
+
+        file_put_contents('../../config/DB_PRODUTOS.php', '<?php $DB_PRODUTOS = ' . var_export($DB_PRODUTOS, true) . ';');
+
+    }
+
 header('Location: ../view/ProductAdminView.php');
 exit;
 ?>
