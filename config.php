@@ -1,4 +1,4 @@
-<?php $DB_PRODUTOS = array (
+<?php $DB= array (
   'image_product' => 
   array (
     0 => '../../public/images/product-1.png',
@@ -10,7 +10,7 @@
     6 => '../../public/images/product-7.png',
     7 => '../../public/images/product-8.png',
     8 => '../../public/images/product-9.png',
-
+    9 => 'aaa',
   ),
   'name_product' => 
   array (
@@ -23,16 +23,7 @@
     6 => 'Cadeira Gamer',
     7 => 'Iphone 13',
     8 => 'Galaxy S23 Ultra',
-    9 => 'Celular Xiami',
-    10 => 'Celular Xiaomi 8',
-    11 => 'XBOX',
-    12 => 'XBOX',
-    13 => 'XBOX',
-    14 => 'Simulador de carro',
-    15 => 'test',
-    16 => 'test',
-    17 => 'test',
-    18 => 'test 2',
+    9 => 'aaa',
   ),
   'price_product' => 
   array (
@@ -45,7 +36,7 @@
     6 => 650,
     7 => 3900,
     8 => 3800,
-
+    9 => '1',
   ),
   'quantity_product' => 
   array (
@@ -58,7 +49,7 @@
     6 => 3,
     7 => 5,
     8 => 7,
-
+    9 => '1',
   ),
   'code' => 
   array (
@@ -71,6 +62,6 @@
     6 => '0007',
     7 => '0008',
     8 => '0009',
-
+    9 => '0010',
   ),
 );

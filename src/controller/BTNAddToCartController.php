@@ -1,4 +1,3 @@
-<script>
 <?php 
     class BTNAddToCartController{    
         public function adicionarNoCarrinho($code){  
@@ -34,4 +33,3 @@
         }               
     } 
 ?>
-</script>
