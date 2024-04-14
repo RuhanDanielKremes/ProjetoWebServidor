@@ -1,10 +1,11 @@
+<script>
 <?php 
     class BTNAddToCartController{    
         public function adicionarNoCarrinho($code){  
             include("CartController.php");
-            require "../../config/DB.php";
+            require "../../config/DB_PRODUTOS.php";
             //Função array search retorna o index do produto
-            $index = array_search($code, $DB_PRODUTOS['$code']);
+            $index = array_search($_POST['product_code'], $DB_PRODUTOS['$code']);
 
             if ($index == true) {
                 //O codigo só puxei por controle msm, talvez nem seja necessário
@@ -33,3 +34,4 @@
         }               
     } 
 ?>
+</script>

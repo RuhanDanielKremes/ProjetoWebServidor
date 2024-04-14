@@ -26,3 +26,5 @@ meu_projeto/
 │
 └── config/
     └── db.php
+
+revisar questao do carrinho e pagina de produtos, apagar bd

@@ -1,7 +1,7 @@
 <?php
 
 include '../model/CartModel.php';
-//função que cria a matriz do carrinho ao cliclar no botão
+
  function addLineInMatrix($image, $name, $price, $quantity, $code){
     if(!isset($GLOBALS['matrix'])){
         //inicializando a matriz caso não exista

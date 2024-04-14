@@ -21,7 +21,11 @@
                 <h2><?php echo $name; ?></h2>
                 <p>R$ <?php echo number_format($price, 2, ',', '.'); ?></p>
                 <p>Quantidade: <?php echo $quantity; ?></p>
-                <button type="submit" class="btn-buy" name="add_to_cart" onclick="adicionarNoCarrinho($code)">Adicionar ao Carrinho</button>
+                <form action="../controller/BTNAddToCartController.php" method="post">
+                    <button type="submit" class="btn-buy" name="add_to_cart" >Adicionar ao Carrinho</button>
+                    <!--Enviando o codigo do produto em questão-->
+                    <input type="hidden" name="product_code" value="<?php echo $code; ?>">
+                </form>
             </div>
             <?php } ?>
     </div>

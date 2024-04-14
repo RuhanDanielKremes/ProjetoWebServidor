@@ -5,7 +5,10 @@
 <div class="admin-product">
     <div class="add-product">
         <h1>Adicionar Produto</h1>
-        <form action="product-admin-controller" method="post"> 
+        <form action="../controller/ProductAdminController.php" method="post"> 
+
+            <label for="img-product">Nome:</label>
+            <input type="text" name="img-product" id="img-product" required><br>
 
             <label for="name-product">Nome:</label>
             <input type="text" name="name-product" id="name-product" required><br>
@@ -19,9 +22,8 @@
             <label for="code">Código:</label>
             <input type="text" name="code" id="code" required><br>
             
-            <label for="img-product">Insira a imagem</label>
-            <input type="file" name="img-product" id="img-product" required> 
-            <input type="submit" value="Adicionar Produto">
+    
+            <input type="submit" name="add_product" value="Adicionar">
 
         </form>    
     </div>
