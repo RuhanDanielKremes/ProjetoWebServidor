@@ -22,9 +22,10 @@
                 <h3 class="tittle"><?php echo $name; ?></h3>
                 <p>R$ <?php echo number_format($price, 2, ',', '.'); ?></p>
                 
-                <form action="../controller/BTNAddToCartCartController.php" method="post">
-                    <input type="hidden" name="product_code" value="<?php echo $code; ?>">                 <!-- Campo oculto para enviar o código do produto -->
-                    <button type="submit" class="btn-buy" name="add_to_cart">Adicionar ao Carrinho</button>
+                <form action="../controller/BTNAddToCartController.php" method="post">
+                    <button type="submit" class="btn-buy" name="add_to_cart">Adicionar ao Carrinho
+                        <input type="hidden" name="product_code" value="<?php echo $code; ?>">                 <!-- Campo oculto para enviar o código do produto -->
+                    </button>
                 </form>
         </div>
             <?php } ?>

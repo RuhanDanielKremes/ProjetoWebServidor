@@ -1,6 +1,6 @@
 <?php 
 require "../../config/DB_PRODUTOS.php";
-include "../controller/CartController.php";
+include "CartController.php";
 
 $cartController = new CartController();
 
