@@ -2,9 +2,10 @@
 <html lang="en">
 
 <?php include "../../public/header.php"; ?>
+<link rel="stylesheet" href="../../public/css/styleAdminProducts.css">
 <div class="admin-product">
     <div class="add-product">
-        <h1>Adicionar Produto</h1>
+        <h1 class="tittle" >Adicionar Produto</h1>
         <form action="../controller/ProductAdminController.php" method="post" enctype="multipart/form-data"> 
 
             <label for="img-product">Imagem:</label>
@@ -22,12 +23,12 @@
             <label for="code">Código:</label>
             <input type="text" name="code" id="code" required><br>
             
-            <input type="submit" name="add_product" value="Adicionar">
+            <input class="btn" type="submit" name="add_product" value="Adicionar">
 
         </form>    
     </div>
     <div class="del-product">
-        <h1>Deletar produto</h1>
+        <h1 class="tittle">Deletar produto</h1>
         <table>
             <thead>
                 <tr>
@@ -56,7 +57,7 @@
                         <td><?php echo $code; ?></td>
                         <form action="../controller/ProductAdminController.php" method="post">
                             <td> 
-                                <button type="submit" name="delete-product">
+                                <button class="btn" type="submit" name="delete-product">
                                     <input type="hidden" name="code-input" value="<?php echo $code; ?>">
                                     <img src="../../public/images/remove.png" name='delete-product'>  <!-- Desenvolver funçao de deletar puxando pelo código"-->
                                 </button>
@@ -71,6 +72,5 @@
     </div>
 </div>
 
-<?php include "../../public/footer.php"; ?>
 
 </html>

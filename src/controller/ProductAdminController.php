@@ -11,25 +11,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_product"])) {
     $filename = basename($_FILES['img-product']['name']);
     $path_file = $path_dir . $filename;
     
-    // Move o arquivo temporário para o diretório de destino
-    if (move_uploaded_file($_FILES['img-product']['tmp_name'], $path_file)) {
-        
-        $productModel = new product_model();
-
-        $image = $path_file;
-        $name = $_POST['name-product'];
-        $quantity = intval($_POST['quantity-product']);
-        $price = floatval($_POST['price-product']);
-        $code = $_POST['code'];
-
-        // Chamar o método para adicionar um novo produto
-        $productModel->add_product($image, $name, $quantity, $price, $code);
-        $_SESSION['sucess'] = true;
-
-    } else {
-        echo "Ocorreu um erro ao enviar o arquivo.";
+    $code = $_POST['code'];
+    if(!(array_search($code, $DB_PRODUTOS['code']) == $code)){
+        if (move_uploaded_file($_FILES['img-product']['tmp_name'], $path_file)) {
+            
+            $productModel = new product_model();
+    
+            $image = $path_file;
+            $name = $_POST['name-product'];
+            $quantity = intval($_POST['quantity-product']);
+            $price = floatval($_POST['price-product']);
+    
+            // Chamar o método para adicionar um novo produto
+            $productModel->add_product($image, $name, $quantity, $price, $code);
+            $_SESSION['sucess'] = true;
+    
+        } else {
+            echo "Ocorreu um erro ao enviar o arquivo.";
+        }
+    }else{
+        echo "Esse produto já existe na base de dados, vá para página atualizar";
     }
-}
+    }
+    // Move o arquivo temporário para o diretório de destino
 
 if(isset($_SESSION["sucess"]) && $_SESSION['sucess'] === true) {
     echo '
