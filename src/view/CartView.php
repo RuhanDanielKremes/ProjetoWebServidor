@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
 <?php 
     include '../public/header.php';
     include '../controller/CartController.php';
