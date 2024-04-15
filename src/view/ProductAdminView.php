@@ -26,8 +26,8 @@
 
         </form>    
     </div>
-    <div class="edit-product">
-        <h1>Editar produto</h1>
+    <div class="del-product">
+        <h1>Deletar produto</h1>
         <table>
             <thead>
                 <tr>
