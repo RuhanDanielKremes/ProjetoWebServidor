@@ -13,10 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_product"])) {
     
     // Move o arquivo temporário para o diretório de destino
     if (move_uploaded_file($_FILES['img-product']['tmp_name'], $path_file)) {
-        // Criar uma instância do modelo de produto
+        
         $productModel = new product_model();
 
-        // Receber os parâmetros do formulário
         $image = $path_file;
         $name = $_POST['name-product'];
         $quantity = intval($_POST['quantity-product']);
