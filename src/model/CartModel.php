@@ -14,6 +14,10 @@ class CartModel {
             'quantidade' => $quantidade,
             'preco' => $preco
         );
+
+        // Depuração - exibir os itens após a adição
+        echo "Item adicionado ao carrinho: ";
+        var_dump($this->cartItems);
     }
 
     public function removerItem($produto_id) {
@@ -44,3 +48,4 @@ class CartModel {
 
 }
 ?>
+
