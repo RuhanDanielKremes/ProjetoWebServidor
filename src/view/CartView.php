@@ -34,13 +34,15 @@
 
     // Obter os itens no carrinho
     $cartItems = $cartController->getCartItems();
-
+    $json_data = file_get_contents('../../config/BDsaveCart.json');
+    $cart_carregado = json_decode($json_data, true); 
+    
     // Verificar se o carrinho está vazio
-    if (empty($cartItems)) {
+    if (empty($cart_carregado)) {
         echo "<h2>O carrinho está vazio.</h2>";
     } else {
         // Exibir cada item no carrinho
-        foreach ($cartItems as $item) {
+        foreach ($cart_carregado as $item) {
             echo "<div class='row'>";
             echo "<div class='col s12'>";
             echo "<div class='card'>";
