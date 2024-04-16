@@ -16,6 +16,12 @@
 - Criação e manipulação do DB produtos e DB produtos excluídos.
 - Associação da sessão ao crud dos admin e estilização da página de produtos.
 
+### Requisitos do Sistema/ Instalação
+    * PHP 8+;
+    * Nosso projeto se utiliza da ferramenta XAMPP, o qual deve ser instalado.
+    * Instalar XAMPP caso necessário: https://www.apachefriends.org/pt_br/index.html
+    * Ativar o Apache no painel de controle do XAMPP.
+
 ### Funcionalidades e bugs das páginas desenvolvidas:
 
 #### PÁGINA DE PRODUTOS PARA O USUÁRIO 
