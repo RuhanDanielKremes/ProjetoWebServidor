@@ -6,15 +6,19 @@
     $senha = $_POST['senha'];
     $iterator = 0;
 
-    foreach ($DB['name'] as $name){
+    $json_data = file_get_contents('../../config/BDsave.json');
+    $vetor_carregado = json_decode($json_data, true);
+
+
+    foreach ($vetor_carregado['name'] as $name){
         if ($nome === $name){
-            if ($senha === $DB['password']["$iterator"]){
+            if ($senha === $vetor_carregado['password']["$iterator"]){
                 echo 'Bem vindo, ' . $nome . '!';
                 session_start();
                 $_SESSION['LogginTime'] = time()+3600;
                 $_SESSION['name'] = $nome;
-                $_SESSION['role'] = $DB['role']["$iterator"];
-                $_SESSION['view'] = $DB['role']["$iterator"];
+                $_SESSION['role'] = $vetor_carregado['role']["$iterator"];
+                $_SESSION['view'] = $vetor_carregado['view']["$iterator"];
                 header("Location: ../index.php");
                 break;                
             } else {

@@ -13,6 +13,5 @@
     $DB_PRODUTOS_EXCLUIDOS = [];
     
 
-    $DB_paginas_atorizada_para_usuarios = array('/PWS/ProjetoWebServidor/src/index.php', '/PWS/ProjetoWebServidor/src/view/ProductUserView.php', '/PWS/ProjetoWebServidor/src/view/CartView.php');
-
+    $DB_paginas_atorizada_para_usuarios = array('src/index.php', 'src/view/ProductUserView.php', 'src/view/CartView.php');
 ?>

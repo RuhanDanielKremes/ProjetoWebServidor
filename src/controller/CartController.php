@@ -1,6 +1,40 @@
 <?php
-
 include '../model/CartModel.php';
+include '../../config/DB_PRODUTOS.php';
+include '../../config/DB.php';
+
+$addItem = function(){
+    if(isset($_POST['product_code'])){
+        $code = $_POST['product_code'];
+        
+        $json_data = file_get_contents('../../config/BDsaveCart.json');
+        $cart_carregado = json_decode($json_data, true);
+        
+        if(empty($cart_carregado)){
+            $cart_carregado = array(
+                'product_code' => array(),
+                'product_name' => array(),
+                'product_price' => array(),
+                'product_quantity' => array(),
+                'user' => array()
+            );
+        }
+        
+        $cart_carregado['product_code'][] = $code;
+        $cart_carregado['product_name'][] = $DB_PRODUTOS['name_product'][$code];
+        $cart_carregado['product_price'][] = $DB_PRODUTOS['price_product'][$code];
+        $cart_carregado['product_quantity'][] = 1; 
+        $cart_carregado['user'][] = $_SESSION['name'];
+
+        $json_data = json_encode($cart_carregado);
+        file_put_contents('../../config/BDsaveCart.json', $json_data);
+    } 
+}
+?>
+
+<?php
+
+
 
 class CartController {
     private $cartModel;

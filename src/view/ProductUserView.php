@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="../../public/css/styleProducts.css">
-<?php include '../public/header.php'?>
+<?php include '../../public/header.php'?>
 
 <div class='container mediun'>
     <!--GRID DE PRODUTOS-->

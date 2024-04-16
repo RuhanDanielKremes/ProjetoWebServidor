@@ -39,22 +39,25 @@
                 <div class="black-text margin-10px">
                     <?php
                     session_start();
-                    $timeremain = $_SESSION['LogginTime'] - time();
-                    if($timeremain >= 3600){
-                        echo 'Tempo restante: ' . floor($timeremain/3600) . ' hora(s)';
-                    }elseif($timeremain >=60){
-                        echo 'Tempo restante: ' . floor($timeremain/60) . ' minuto(s)';
-                    }else{
-                        echo 'Tempo restante: ' . $timeremain . ' segundo(s)';
+                    if(isset($_SESSION['LogginTime'])){
+                        $timeremain = $_SESSION['LogginTime'] - time();
+                        if($timeremain >= 3600){
+                            echo 'Tempo restante: ' . floor($timeremain/3600) . ' hora(s)';
+                        }elseif($timeremain >=60){
+                            echo 'Tempo restante: ' . floor($timeremain/60) . ' minuto(s)';
+                        }else{
+                            echo 'Tempo restante: ' . $timeremain . ' segundo(s)';
+                        }
                     }
-                    ?>
+                        ?>
                 </div>
             </li>
             <li>
                 <?php 
                     include "breadcrumbs.php";
-                    echo "<a href=\""."$breadcrumbs"."src/controller/LogOut.php\"                      
-                    class='btn brand z-depth-10'><i class=\"material-icons left\">exit_to_app</i>Log out</a>"
+                    $dirLogOut = $breadcrumbs."src/controller/LogOut.php";
+                    $dirIndex = $breadcrumbs."src/index.php";
+                    echo "<a href=\"$dirIndex\" class='btn brand z-depth-10'><i class=\"material-icons left\">exit_to_app</i>Log out</a>"
                 ?>
             </li>
         </ul>
@@ -63,10 +66,11 @@
 </nav>
 <?php
     include "breadcrumbs.php";
-    $dir = "$breadcrumbs"."src/index.php/";
-    $dir2 = "$breadcrumbs"."public/images/AccessDenied.png";
-    echo "<div class=\"container\"><h1>Você não tem permissão para acessar essa página</h1><a href=\"$dir\" class=\"btn right\">Volte para página inicial</a></div>";
-    echo "<img class=\"materialboxed fixedImage\" width=\"200\" src=\"$dir2\"><br>";
-    $dir = "$breadcrumbs"."public/footer.php";
-    include "$dir";
+    $dirIndex = $breadcrumbs."src/index.php";
+    $dirAccessDenied = $breadcrumbs."public/images/AccessDenied.png";
+    echo "<div>$_SERVER[REQUEST_URI]</div>";
+    echo "<div class=\"container\"><h1>Você não tem permissão para acessar essa página</h1><a href=\"$dirIndex\" class=\"btn right\">Volte para página inicial</a></div>";
+    echo "<img class=\"materialboxed fixedImage\" width=\"200\" src=\"$dirAccessDenied\"><br>";
+//    $dirFooter = $breadcrumbsfunction("public/footer.php");
+    include "footer.php";
 ?>
