@@ -1,0 +1,5 @@
+Requisitos do Sistema:
+    * PHP 8+;
+    * Nosso projeto se utiliza da ferramenta XAMPP, o qual deve ser instalado.
+    * Instalar XAMPP caso necessário: https://www.apachefriends.org/pt_br/index.html
+    * Ativar o Apache no painel de controle do XAMPP.

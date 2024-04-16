@@ -8,7 +8,7 @@
     <div class="grid-product">
         <?php 
             require '../../config/DB_PRODUTOS.php';
-            require '../controller/BTNAddToCartController.php';
+            require '../controller/CartController.php';
             
             //A cada iteração vai renderizar um card de produtos vindo do banco de dados
             foreach($DB_PRODUTOS['image_product'] as $index => $image){
@@ -22,7 +22,7 @@
                 <h3 class="tittle"><?php echo $name; ?></h3>
                 <p>R$ <?php echo number_format($price, 2, ',', '.'); ?></p>
                 
-                <form action="../controller/BTNAddToCartController.php" method="post">
+                <form action="../controller/CartController.php" method="post">
                     <button type="submit" class="btn-buy" name="add_to_cart">Adicionar ao Carrinho
                         <input type="hidden" name="product_code" value="<?php echo $code; ?>">                 <!-- Campo oculto para enviar o código do produto -->
                     </button>

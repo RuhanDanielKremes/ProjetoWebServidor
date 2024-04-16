@@ -2,8 +2,12 @@
 <html lang="en">
 
 <head>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        .container{
+            text-align: center;
+        }
+    </style>
 </head>
 
 <?php 
@@ -55,15 +59,16 @@
             echo "</div>";
             echo "</div>";
         }
-
-        // Calcular e exibir o total do carrinho
-        $total = $cartController->getTotal();
-        echo "<p>Total: R$ " . number_format($total, 2, ',', '.') . "</p>"; // Formatação do total
-
-        // Adicionar o botão para continuar comprando
-        echo "<a class='btn' href='ProductUserView.php'>Continuar Comprando</a>";
     }
+
+    // Calcular e exibir o total do carrinho
+    $total = $cartController->getTotal();
+    echo "<p>Total: R$ " . number_format($total, 2, ',', '.') . "</p>"; // Formatação do total
+
+    // Adicionar o botão para continuar comprando
+    echo "<a class='btn' href='ProductUserView.php'>Continuar Comprando</a>";
     ?>
+    
 </div>
 
 <?php include '../../public/footer.php' ?>
