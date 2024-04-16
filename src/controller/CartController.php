@@ -34,7 +34,21 @@ $addItem = function(){
 
 <?php
 
+// Verificar se um item foi adicionado ao carrinho
+if (isset($_POST['add_to_cart'])) {
+    $code = $_POST['product_code'];
+    $name_product = $_POST['name_product']; // Se necessário
+    $quantity_product = $_POST['quantity_product']; // Se necessário
+    $price_product = $_POST['price_product']; // Se necessário
 
+    // Adicionar o item ao carrinho (ou realizar outras operações conforme necessário)
+    $cartController = new CartController();
+    $cartController->addCart($code, $name_product, $quantity_product, $price_product);
+
+    // Redirecionar para o CartView.php após o processamento
+    header("Location: ../view/CartView.php");
+    exit();
+}
 
 class CartController {
     private $cartModel;
