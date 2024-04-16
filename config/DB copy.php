@@ -9,9 +9,6 @@
         'created_at' => ['created_at', 'created_at', 'created_at', 'created_at', 'created_at', 'created_at', 'created_at', 'created_at', 'created_at', 'created_at']
     ];
 
-    /*Minha ideia é armazenar todos registros de produtos excluidos e além disso armazenar o user que excluiu pra fazer sistema mais seguro*/
-    $DB_PRODUTOS_EXCLUIDOS = [];
-    
 
     $DB_paginas_atorizada_para_usuarios = array('src/index.php', 'src/view/ProductUserView.php', 'src/view/CartView.php');
 ?>

@@ -6,8 +6,7 @@
     3 => '../../public/images/product-4.png',
     4 => '../../public/images/product-5.png',
     5 => '../../public/images/product-6.png',
-    6 => '../../public/images/product-7.png',
-    7 => '../../public/images/product-9.png',
+    6 => '../../public/images/product-8.png',
   ),
   'name_product' => 
   array (
@@ -16,8 +15,7 @@
     3 => 'Kit Gamer',
     4 => 'GTX 1650',
     5 => 'Controle PS5',
-    6 => 'Cadeira Gamer',
-    7 => 'Samsung s23 ULTRA',
+    6 => 'Iphone 13',
   ),
   'price_product' => 
   array (
@@ -26,8 +24,7 @@
     3 => 250,
     4 => 1200,
     5 => 500,
-    6 => 650,
-    7 => 3500.0,
+    6 => 3500.0,
   ),
   'quantity_product' => 
   array (
@@ -36,8 +33,7 @@
     3 => 10,
     4 => 5,
     5 => 6,
-    6 => 3,
-    7 => 8,
+    6 => 12,
   ),
   'code' => 
   array (
@@ -46,7 +42,6 @@
     3 => '0004',
     4 => '0005',
     5 => '0006',
-    6 => '0007',
-    7 => '0008',
+    6 => '0008',
   ),
 );
