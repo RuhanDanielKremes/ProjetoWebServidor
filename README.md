@@ -22,7 +22,7 @@
             
 __View User:__
 
- A view renderiza um card com informações direto do banco de dados e no botão adicionar manda o código do produto do card por um input invisível.
+A view renderiza um card com informações direto do banco de dados e no botão adicionar manda o código do produto do card por um input invisível.
 
 Possíveis bugs: O carrinho não estava lendo o código que foi passado por parâmetro.
 Não sabemos se foi erro na lógica do carrinho ou se foi erro na passagem dos parâmetros, não foi possível efetuar o teste.
@@ -39,7 +39,7 @@ Um dos controllers do user seria o BTNAddToCartController onde ao clicar iria pu
 
 __View admin:__
 
-A view renderiza um formulário para adição de um produto (create) direto no banco de dados, na adição da imagem ele move a imagem do arquivo temporário de armazenamento do computador para a pasta especificada no código ‘path_dir’. Além disso, para operação de delete é renderizado uma tabela contendo todos os produtos (read) e o botão de deletar que deleta do banco de dados de produtos e passa para um banco de dados de produtos excluídos com o nome do usuario logado na sessão para controle de informações administrativas. Como nesse primeiro momento o banco de dados foi feito com php eu optei por não fazer a função update por conta da complexidade, mas no próximo trabalho iremos realizar uma operação CRUD completa utilizando consultas e comandos SQL.
+A view renderiza um formulário para adição de um produto (create), na adição da imagem ele move a imagem do arquivo temporário de armazenamento do navegador para a pasta especificada no código ‘path_dir’. Além disso, para operação de delete é renderizado uma tabela contendo todos os produtos (read) e o botão de deletar que deleta do banco de dados de produtos e passa para um banco de dados de produtos excluídos com o nome do usuario logado na sessão, para controle de informações administrativas. Como nesse primeiro momento o banco de dados foi feito com php optamos por não fazer a função update por conta da complexidade, mas no próximo trabalho iremos realizar uma operação CRUD completa utilizando consultas e comandos SQL.
 
 __Controller Admin:__
 
