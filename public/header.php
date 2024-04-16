@@ -2,7 +2,7 @@
     session_start();
     include "breadcrumbs.php";
     if(!isset($_SESSION['LogginTime']) || $_SESSION['LogginTime'] < time()){
-        $dir = $breadcrumbs."view/LoginView.php";
+        $dir = $breadcrumbs."src/view/LoginView.php";
         header("Location: $dir");
     }
     $dir = $breadcrumbs."public/pages_authorized.php";

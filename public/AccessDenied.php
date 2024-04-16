@@ -68,7 +68,6 @@
     include "breadcrumbs.php";
     $dirIndex = $breadcrumbs."src/index.php";
     $dirAccessDenied = $breadcrumbs."public/images/AccessDenied.png";
-    echo "<div>$_SERVER[REQUEST_URI]</div>";
     echo "<div class=\"container\"><h1>Você não tem permissão para acessar essa página</h1><a href=\"$dirIndex\" class=\"btn right\">Volte para página inicial</a></div>";
     echo "<img class=\"materialboxed fixedImage\" width=\"200\" src=\"$dirAccessDenied\"><br>";
 //    $dirFooter = $breadcrumbsfunction("public/footer.php");

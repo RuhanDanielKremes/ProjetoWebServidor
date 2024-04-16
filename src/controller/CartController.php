@@ -3,6 +3,7 @@ include '../model/CartModel.php';
 include '../../config/DB_PRODUTOS.php';
 include '../../config/DB.php';
 
+
 $addItem = function(){
     if(isset($_POST['product_code'])){
         $code = $_POST['product_code'];
@@ -19,13 +20,12 @@ $addItem = function(){
                 'user' => array()
             );
         }
-        
         $cart_carregado['product_code'][] = $code;
         $cart_carregado['product_name'][] = $DB_PRODUTOS['name_product'][$code];
         $cart_carregado['product_price'][] = $DB_PRODUTOS['price_product'][$code];
         $cart_carregado['product_quantity'][] = 1; 
         $cart_carregado['user'][] = $_SESSION['name'];
-
+        
         $json_data = json_encode($cart_carregado);
         file_put_contents('../../config/BDsaveCart.json', $json_data);
     } 
@@ -33,6 +33,7 @@ $addItem = function(){
 ?>
 
 <?php
+$addItem();
 
 // Verificar se um item foi adicionado ao carrinho
 if (isset($_POST['add_to_cart'])) {
