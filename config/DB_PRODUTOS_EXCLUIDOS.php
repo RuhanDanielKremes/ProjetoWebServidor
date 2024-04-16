@@ -1,32 +1,26 @@
 <?php $DB_PRODUTOS_EXCLUIDOS = array (
   'image_product' => 
   array (
-    0 => NULL,
-    1 => '../../public/images/product-7.png',
-    2 => '../../public/images/product-8.png',
+    0 => '../../public/images/product-12.png',
   ),
   'name_product' => 
   array (
-    0 => NULL,
-    1 => 'Cadeira Gamer',
-    2 => 'Iphone 13',
+    0 => 'XBOX',
   ),
   'price_product' => 
   array (
-    0 => NULL,
-    1 => 650,
-    2 => 3500.0,
+    0 => 3500.0,
   ),
   'quantity_product' => 
   array (
-    0 => NULL,
-    1 => 3,
-    2 => 12,
+    0 => 15,
   ),
   'code' => 
   array (
-    0 => '0008',
-    1 => '0007',
-    2 => '0008',
+    0 => '0010',
+  ),
+  'user_delete' => 
+  array (
+    0 => 'Ruhan',
   ),
 );

@@ -37,13 +37,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_product"])) {
     if(isset($_POST['delete-product'])){
         $code = $_POST['code-input'];
         $index = array_search($code, $DB_PRODUTOS['code']);
-        
+        //Puxando o usuário que deletou o produto
+        $userDelete = $_SESSION['name'];
         //histórico de produtos excluidos
         array_push($DB_PRODUTOS_EXCLUIDOS['image_product'], $DB_PRODUTOS['image_product'][$index]);
         array_push($DB_PRODUTOS_EXCLUIDOS['name_product'], $DB_PRODUTOS['name_product'][$index]);
         array_push($DB_PRODUTOS_EXCLUIDOS['price_product'], $DB_PRODUTOS['price_product'][$index]);
         array_push($DB_PRODUTOS_EXCLUIDOS['quantity_product'], $DB_PRODUTOS['quantity_product'][$index]);
         array_push($DB_PRODUTOS_EXCLUIDOS['code'], $code);
+        array_push($DB_PRODUTOS_EXCLUIDOS['user_delete'], $userDelete);
         
         file_put_contents('../../config/DB_PRODUTOS_EXCLUIDOS.php', '<?php $DB_PRODUTOS_EXCLUIDOS = ' . var_export($DB_PRODUTOS_EXCLUIDOS, true) . ';');
         
