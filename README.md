@@ -47,7 +47,7 @@ Para manipular o controller, além de fazer as verificações necessárias, como
 
 A função delete produto além de processar os dados vindo do navegador acabou ficando com o model dentro do controller e fazendo a operação de deleção e envio para o banco de dados produtos excluidos dentro do controller, no próximo trabalho iremos ajustar.
 
-O correto seria o Controller armazenar os dados de sessão do usuário que estava realizando as operações e a efetivação da exclusão do dbprodutos e adição no dbprodutos excluídas fossem feitas de fato no model.
+O correto seria o Controller manipular os dados de sessão do usuário que estava realizando as operações e a efetivação da exclusão do dbprodutos e adição no dbprodutos excluídas fossem feitas de fato no model.
 
 __Model Admin:__
 
