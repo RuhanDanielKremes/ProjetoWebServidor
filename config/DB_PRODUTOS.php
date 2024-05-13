@@ -6,7 +6,6 @@
     3 => '../../public/images/product-4.png',
     4 => '../../public/images/product-5.png',
     5 => '../../public/images/product-6.png',
-    6 => '../../public/images/product-8.png',
   ),
   'name_product' => 
   array (
@@ -15,7 +14,6 @@
     3 => 'Kit Gamer',
     4 => 'GTX 1650',
     5 => 'Controle PS5',
-    6 => 'Iphone 13',
   ),
   'price_product' => 
   array (
@@ -24,7 +22,6 @@
     3 => 250,
     4 => 1200,
     5 => 500,
-    6 => 3500.0,
   ),
   'quantity_product' => 
   array (
@@ -33,7 +30,6 @@
     3 => 10,
     4 => 5,
     5 => 6,
-    6 => 12,
   ),
   'code' => 
   array (
@@ -42,6 +38,5 @@
     3 => '0004',
     4 => '0005',
     5 => '0006',
-    6 => '0008',
   ),
 );
