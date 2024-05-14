@@ -19,5 +19,12 @@
             return $this->model->insertInto( $name, $price, $quantity, $code);
         }
 
+        function queryForCode($name){
+            return $this->model->queryForCode($name);
+        }
+
+        function deleteProduct($name){
+            return $this->model->deleteProduct($name);
+        }
     }
 ?>

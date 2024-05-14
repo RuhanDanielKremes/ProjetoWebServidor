@@ -66,7 +66,7 @@
     
                 $controller = new ProductController();
                 $result = $controller->getAll();
-        
+    
                 if(!empty($result)){
                     foreach ($result as $data) {
                         ?>
@@ -79,16 +79,24 @@
                             <form action="" method="post">
                                 <td> 
                                     <button class="btn" type="submit" name="delete-product">
-                                        <input type="hidden" name="code-input" value="<?php echo $code; ?>">
+                                        <input type="hidden" name="name-input" value="<?php echo $data['product_name']; ?>">
                                         <img src="../../public/images/remove.png" name='delete-product'>  <!-- Desenvolver funçao de deletar puxando pelo código"-->
                                     </button>
                                 </td>
                             </form>
+                            
                         </tr>
                         <?php
                     }
                 }
+
+                if(isset($_POST['delete-product'])) {
+                    $name = $_POST['name-input'];
+                    $controller->deleteProduct($name);
+                    $result = $controller->getAll();
+                }
                 ?>
+                
             </tbody>
         </table>
     </div>

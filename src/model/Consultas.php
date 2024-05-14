@@ -9,9 +9,11 @@ class ProductModel extends Connect{
         $this->table = 'product';
     }
 
-    public function queryForCode(){
+    public function queryForCode($name){
         try{
-    
+            $sqlSelect = $this->connection->query("SELECT product_id FROM $this->table WHERE product_name = $name");
+            $resultQuery = $sqlSelect->fetchAll();
+            return $resultQuery; 
         
         }catch(PDOException $e){
             echo "Banco de dados indisponível" . $e->getMessage();
@@ -40,8 +42,6 @@ class ProductModel extends Connect{
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':quantity', $quantity);
         $stmt->bindParam(':price', $price);
-
-    
         $stmt->execute();
             return true;
             
@@ -50,6 +50,21 @@ class ProductModel extends Connect{
             return false;
         }
     }
+    public function deleteProduct($name){
+    
+        try {
+
+            $sqlDelete = "DELETE FROM " . $this->table . " WHERE product_name = :name";
+            $stmt = $this->connection->prepare($sqlDelete);
+            $stmt->bindParam(':name', $name);
+            $stmt->execute();
+            return true;
+
+        } catch (PDOException $e) {
+            echo "Erro ao excluir produto: " . $e->getMessage();
+            return false;
+        }
+   }
 
 }
 
