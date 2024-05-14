@@ -33,6 +33,24 @@ class ProductModel extends Connect{
         }
     }
 
+    public function insertInto( $name, $price, $quantity, $code){
+        try{
+            $sqlInsert = "INSERT INTO " . $this->table . " (product_name, product_quantity, product_price) VALUES (:name, :quantity, :price)";
+        $stmt = $this->connection->prepare($sqlInsert);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':quantity', $quantity);
+        $stmt->bindParam(':price', $price);
+
+    
+        $stmt->execute();
+            return true;
+            
+        }catch(PDOException $e){
+            echo 'Banco de dados indisponível' . $e->getMessage();
+            return false;
+        }
+    }
+
 }
 
 ?>;

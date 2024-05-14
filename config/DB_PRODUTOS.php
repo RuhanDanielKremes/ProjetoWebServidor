@@ -6,6 +6,7 @@
     3 => '../../public/images/product-4.png',
     4 => '../../public/images/product-5.png',
     5 => '../../public/images/product-6.png',
+    6 => '../../public/images/Estruturadotrabalho.jpg',
   ),
   'name_product' => 
   array (
@@ -14,6 +15,7 @@
     3 => 'Kit Gamer',
     4 => 'GTX 1650',
     5 => 'Controle PS5',
+    6 => 'asdasdas',
   ),
   'price_product' => 
   array (
@@ -22,6 +24,7 @@
     3 => 250,
     4 => 1200,
     5 => 500,
+    6 => 1225.0,
   ),
   'quantity_product' => 
   array (
@@ -30,6 +33,7 @@
     3 => 10,
     4 => 5,
     5 => 6,
+    6 => 1,
   ),
   'code' => 
   array (
@@ -38,5 +42,6 @@
     3 => '0004',
     4 => '0005',
     5 => '0006',
+    6 => '1212',
   ),
 );

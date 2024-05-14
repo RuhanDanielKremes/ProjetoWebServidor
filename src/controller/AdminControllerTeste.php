@@ -15,5 +15,9 @@
             return $result;
         }
 
+        function insertINTO( $name, $price, $quantity, $code){
+            return $this->model->insertInto( $name, $price, $quantity, $code);
+        }
+
     }
 ?>
