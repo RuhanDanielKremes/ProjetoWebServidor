@@ -32,17 +32,15 @@
         }
     }
 
-    // Obter os itens no carrinho
+    // Obter os itens no carrinho diretamente do CartModel
     $cartItems = $cartController->getCartItems();
-    $json_data = file_get_contents('../../config/BDsaveCart.json');
-    $cart_carregado = json_decode($json_data, true); 
     
     // Verificar se o carrinho está vazio
-    if (empty($cart_carregado)) {
+    if (empty($cartItems)) {
         echo "<h2>O carrinho está vazio.</h2>";
     } else {
         // Exibir cada item no carrinho
-        foreach ($cart_carregado as $item) {
+        foreach ($cartItems as $item) {
             echo "<div class='row'>";
             echo "<div class='col s12'>";
             echo "<div class='card'>";
@@ -63,7 +61,7 @@
         }
     }
 
-    // Calcular e exibir o total do carrinho
+    // Calcular e exibir o total do carrinho diretamente do CartModel
     $total = $cartController->getTotal();
     echo "<p>Total: R$ " . number_format($total, 2, ',', '.') . "</p>"; // Formatação do total
 

@@ -1,5 +1,5 @@
 <?php 
-    require_once('Connect.php');
+    require_once('../../config/Connect.php');
 class Consultas{
     //quando eu for chamar a query vou ter que instanciar uma conexão e a var connection com o método getConnection()
     public function queryForCode($connection, $code){
@@ -27,7 +27,6 @@ class Consultas{
             return false;
         }
     }
-
 }
 
 ?>;
