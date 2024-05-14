@@ -14,7 +14,8 @@
             try{
                 $this->connection = new PDO("pgsql:host=" . HOST . "; dbname=" .DATABASE, USER, PASSWORD);
                 $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+                
+                //teste
                 echo "conexão estabelecida";
             }catch(PDOException $e){
                 echo "Falha ao conectar". $e->getMessage() ."";
@@ -25,6 +26,4 @@
             return $this->connection;
         }
     }
-
-    $connect = new Connect();
 ?>; 

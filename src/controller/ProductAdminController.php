@@ -7,7 +7,7 @@ include '../../config/DB_PRODUTOS_EXCLUIDOS.php';
 // Verificar se o formulário de adição de produto foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_product"])) {
     $path_dir = "../../public/images/";
-
+    //reutilizar isso e colocar função com caracteres especiais 
     $filename = basename($_FILES['img-product']['name']);
     $path_file = $path_dir . $filename;
     
