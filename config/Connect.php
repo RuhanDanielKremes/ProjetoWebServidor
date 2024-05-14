@@ -21,6 +21,9 @@
             }
         }
         
+        function getConnection(){
+            return $this->connection;
+        }
     }
 
     $connect = new Connect();
