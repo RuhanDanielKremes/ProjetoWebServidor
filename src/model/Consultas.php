@@ -1,18 +1,22 @@
 <?php 
     require_once('Connect.php');
-class Consultas{
-    //quando eu for chamar a query vou ter que instanciar uma conexão e a var connection com o método getConnection()
-    public function queryForCode($connection, $code){
-        //criar var code no bd, esqueci. se não vai ficar ruim consutar pelo id
-        $query = "SELECT * FROM product WHERE product_code = :code";
-        //abrindo a conexão e enviando para o banco de dados a consulta
-        $stmt = $connection->prepare($query);
-        //bindParam vincula um parametro a consulta
-        $stmt->bindParam(':code', $code, PDO::PARAM_STR);
-        //executa a consulta
-        $stmt->execute();
+class ProductModel extends Connect{
+    private $table;
+
+    function __construct(){
+        //invocando construtor da classe pai para estabelecer uma conexão bd
+        parent::__construct();
+        $this->table = 'product';
+    }
+
+    public function queryForCode(){
+        try{
+    
         
-        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }catch(PDOException $e){
+            echo "Banco de dados indisponível" . $e->getMessage();
+            return false;
+        }
 
     }
 
@@ -29,6 +33,7 @@ class Consultas{
             return false;
         }
     }
+
 }
 
 ?>;
