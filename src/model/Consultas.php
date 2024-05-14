@@ -1,10 +1,9 @@
 <?php 
-use FTP\Connection;
     require_once('Connect.php');
 class Consultas{
     //quando eu for chamar a query vou ter que instanciar uma conexão e a var connection com o método getConnection()
     public function queryForCode($connection, $code){
-        //criar var code no bd, esqueci
+        //criar var code no bd, esqueci. se não vai ficar ruim consutar pelo id
         $query = "SELECT * FROM product WHERE product_code = :code";
         //abrindo a conexão e enviando para o banco de dados a consulta
         $stmt = $connection->prepare($query);
