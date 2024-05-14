@@ -42,29 +42,31 @@
             </thead>
             <tbody>
                 <?php
-                require '../../config/DB_PRODUTOS.php';
-                foreach ($DB_PRODUTOS['image_product'] as $index => $image) {
-                    $name = $DB_PRODUTOS['name_product'][$index];
-                    $price = $DB_PRODUTOS['price_product'][$index];
-                    $quantity = $DB_PRODUTOS['quantity_product'][$index];
-                    $code = $DB_PRODUTOS['code'][$index];
-                    ?>
-                    <tr>
-                        <td><img src="<?php echo $image; ?>" alt="<?php echo $name; ?>" width="100px" height="100px"></td>
-                        <td><?php echo $name; ?></td>
-                        <td><?php echo $quantity; ?></td>
-                        <td>R$ <?php echo number_format($price, 2, ',', '.'); ?></td>
-                        <td><?php echo $code; ?></td>
-                        <form action="../controller/ProductAdminController.php" method="post">
-                            <td> 
-                                <button class="btn" type="submit" name="delete-product">
-                                    <input type="hidden" name="code-input" value="<?php echo $code; ?>">
-                                    <img src="../../public/images/remove.png" name='delete-product'>  <!-- Desenvolver funçao de deletar puxando pelo código"-->
-                                </button>
-                            </td>
-                        </form>
-                    </tr>
-                    <?php
+                require_once('../controller/AdminControllerTeste.php');
+    
+                $controller = new ProductController();
+                $result = $controller->getAll();
+        
+                if(!empty($result)){
+                    foreach ($result as $data) {
+                        ?>
+                        <tr>
+                            <td>teste</td>
+                            <td> <?php echo $data['product_name']?> </td> 
+                            <td> <?php echo $data['product_quantity']?> </td> 
+                            <td> <?php echo $data['product_price']?> </td> 
+                            <td>teste</td>
+                            <form action="" method="post">
+                                <td> 
+                                    <button class="btn" type="submit" name="delete-product">
+                                        <input type="hidden" name="code-input" value="<?php echo $code; ?>">
+                                        <img src="../../public/images/remove.png" name='delete-product'>  <!-- Desenvolver funçao de deletar puxando pelo código"-->
+                                    </button>
+                                </td>
+                            </form>
+                        </tr>
+                        <?php
+                    }
                 }
                 ?>
             </tbody>

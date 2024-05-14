@@ -1,5 +1,5 @@
 <?php 
-    require_once('Connect.php');
+    require_once('../../config/Connect.php');
 class ProductModel extends Connect{
     private $table;
 
@@ -24,10 +24,9 @@ class ProductModel extends Connect{
         //
          try {
         
-            $sqlSelect = $this->connection->query("SELECT * FROM $this->table");
+            $sqlSelect = $this->connection->query("SELECT product_name, product_quantity, product_price FROM $this->table");
             $resultQuery = $sqlSelect->fetchAll();
-            return $resultQuery;
-            
+            return $resultQuery;   
         } catch (PDOException $e) {
             echo "Banco de dados indisponível " . $e->getMessage();
             return false;

@@ -11,7 +11,8 @@
 
         function getAll(){
             $result = $this->model->getAll();
-            
+            require_once('../view/ProductAdminView.php');
+            return $result;
         }
 
     }
