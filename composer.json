@@ -1,0 +1,16 @@
+{
+    "name": "ruhan/pws",
+    "description": "Projeto Web Servidor",
+    "autoload": {
+        "psr-4": {
+            "Ruhan\\Pws\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ruhan Daniel Kremes",
+            "email": "ruhankremes@alunos.utfpr.edu.br"
+        }
+    ],
+    "require": {}
+}
